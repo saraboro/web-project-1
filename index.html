@@ -1,0 +1,99 @@
+<!--
+============================================================================
+ about.html
+ Web Project
+ Author: Tamar Cohen & Sara Borowski
+ ============================================================================
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>About</title>
+    <meta name="description" content="Web Project ">
+    <meta name="author" content="Tamar Cohen & Sara Borowski">
+    <meta charset="utf-8" />
+    <!-- Stylesheet File -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="CSS/global.css" rel="stylesheet">
+    <link href="CSS/index.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="Media/favicon.png" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <div class="left">
+                <li><a href="index.html">About</a></li>
+                <li><a href="Includes/statistics.html">Statistics</a></li>
+                <li><a href="Includes/survey.html">Fill Survey</a></li>
+                <li><a href="Includes/compare.html">Compare</a></li>
+            </div>
+            <div class="right">
+                <li><a href="Includes/signup.html">Sign Up</a></li>
+                <li><a href="Includes/login.html">Login</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- About -->
+	
+	<!-- Slogen -->
+    <div class="slogen">
+        <h3>BY-THE-WAY studies<span> vehicle safety</span> and <span>driving behavior</span> to reduce <span>vehicle crashes</span> globally</h3>
+    </div>
+	
+	<!-- Video -->
+    <div class="video_container">
+        <video autoplay loop controls class="main_video">
+            <source src="Media/main.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Go-To -->
+    <div class="layout-container layout-padding-64 layout-center goto_container">
+        <div class="layout-row">
+            <div class="layout-quarter"><h3></h3></div><!--demo, to float by quarter-->
+            <div class="layout-quarter">
+                <a href="Includes/survey.html"> <img src="Media/forms.png" alt="forms" style="width:50%" class="layout-hover-opacity">
+                <h3>Take the Survey</h3></a>
+            </div>
+            <div class="layout-quarter">
+                <a href="Includes/statistics.html"> <img src="Media/statistics.png" alt="statistics" style="width:50%" class="layout-hover-opacity">
+                <h3>View Statistics</h3></a>
+            </div>
+		</div>
+	</div>
+	
+	 <!-- Market -->
+	<section class="market_section">
+        <section class="market_block">
+            <h2>Market Insights</h2>
+            <p>Our independent reports are for understanding the true state of the world’s car safety based on measurements of real user experience.</p>
+		</section>
+	</section>
+
+    <!-- Team -->
+    <div class="layout-container layout-padding-64 layout-center team">
+        <h2>Co-Founders</h2>
+        <div class="layout-row">
+            <div class="layout-quarter"><h3></h3></div><!--demo, to float by quarter-->
+            <div class="layout-quarter">
+                <img src="Media/tamar.jpg" alt="Tamar Cohen" style="width:50%" class="layout-circle layout-hover-opacity">
+                <h3>Tamar Cohen</h3>
+                <p>Software Engineer</p>
+            </div>
+            <div class="layout-quarter">
+                <img src="Media/sara.jpg" alt="Sara Borowski" style="width:50%" class="layout-circle layout-hover-opacity">
+                <h3>Sara Borowski</h3>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

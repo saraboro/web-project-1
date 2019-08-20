@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Log In</title>
+	</head>
+
+	<body>
+	    <!-- Navbar -->
+		<link rel = "stylesheet" type = "text/css" href = "../CSS/global.css"/>
+		<nav>
+			<ul>
+				<div class="left">
+					<li><a href="../index.html">About</a></li>
+					<li><a href="../Includes/statistics.html">Statistics</a></li>
+					<li><a href="../Includes/survey.html">Fill Survey</a></li>
+					<li><a href="../Includes/compare.html">Compare</a></li>
+				</div>
+				<div class="right">
+					<li><a href="../Includes/signup.html">Sign Up</a></li>
+					<li><a href="../Includes/login.html">Login</a></li>
+				</div>
+			</ul>
+		</nav>
+		
+		<!-- Login -->
+		<script src = "login.js"></script>
+		<link rel = "stylesheet" type = "text/css" href = "../CSS/login.css"/>
+		<div class="login">
+			<form>
+				<h2>Login to your account</h2>
+				<input type="text" id = "user-name" name="user-name" placeholder="Enter Username" required>
+				<br>
+				<input type="password" id = "password" name="password" placeholder="Enter Password" required>
+				<br>
+				<button class="btn" onclick = "login()">LOG IN</button>
+				<p class="login__signup">Don't have an account? &nbsp;<a id = "signup-link" href="signup.html">Sign up</a></p>
+			</form>
+		</div>
+		
+		<!--<label id = "user-name-label">User name</label>
+		<input type="text" id = "user-name">
+		<label id = "password-label">Password</label>
+		<input type="text" id = "password">
+		<button id = "login" onclick = "login()">-->
+		
+	</body>
+</html>

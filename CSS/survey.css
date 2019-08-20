@@ -1,0 +1,158 @@
+/*
+============================================================================
+ servey.css
+ Web Project
+ Author: Tamar Cohen & Sara Borowski
+ ============================================================================
+*/
+
+body {
+	padding:2%;
+	opacity: 0.9;
+	z-index: 1;
+}
+hr{
+	border-top: .5px solid;
+}
+
+/*form*/
+form{
+	
+	padding:4%;
+	margin: 0px auto;
+	padding-top: 0px;
+	width: 690px;
+	color: #000000;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+	font-size: 14px;
+	border-style: solid;
+	border-width: medium;
+	border-color: #013f6e;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+  background-color: #004e72;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+label.container{
+	font-family:Serif;
+	font-size:18px;
+	margin:  0px, 0px, 12px;
+	padding:0px,0px,0px,35px;
+}
+label.question{
+  display: block;
+  position: relative;
+  padding-left: 0px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*popup*/
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+.popup {
+	margin: 70px auto;
+	padding: 2%;
+	background: #fff;
+	border-radius: 5px;
+	width: 70%;
+	height: 75%;
+	position: relative;
+	transition: all 5s ease-in-out;
+}
+.popup h2 {
+	margin: 5%;
+	font-family: Tahoma, Arial, sans-serif;
+	text-align: center;
+}
+.popup h3 {
+	font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+.popup .close:hover {
+	color: #06D85F;
+}
+.popup .content {
+	max-height: 105%;
+	overflow: auto;
+}
+@media screen and (max-width:767px) {
+	.popup h3 {
+		font-size: 20px;
+	}
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sign Up</title>
+	</head>
+
+	<body>
+	    <!-- Navbar -->
+		<link rel = "stylesheet" type = "text/css" href = "../CSS/global.css"/>
+		<nav>
+			<ul>
+				<div class="left">
+					<li><a href="../index.html">About</a></li>
+					<li><a href="../Includes/statistics.html">Statistics</a></li>
+					<li><a href="../Includes/survey.html">Fill Survey</a></li>
+					<li><a href="../Includes/compare.html">Compare</a></li>
+				</div>
+				<div class="right">
+					<li><a href="../Includes/signup.html">Sign Up</a></li>
+					<li><a href="../Includes/login.html">Login</a></li>
+				</div>
+			</ul>
+		</nav>
+		
+		<!-- Signup -->		
+		<script src = "signup.js"></script>
+		<link rel = "stylesheet" type = "text/css" href = "../CSS/signup.css"/>
+		
+		<div class="signup">
+			<form>
+				<h1>SIGN UP</h1>
+				<p>Please fill in this form to create an account.</p>
+				<hr>
+				<label for="user-name"><b>Username</b></label><br>
+				<input type="text" id = "user-name" name="user-name" placeholder="Enter Username" required>
+				<br>
+				<label for="psw"><b>Password</b></label><br>
+				<input type="password" id = "password" name="password" placeholder="Enter Password" required>
+				<br>
+				<label for="psw-repeat"><b>Repeat Password</b></label><br>
+				<input type="password" id = "password" name="psw-repeat" placeholder="Repeat Password"  required>
+				<br>
+				<button class="btn" onclick = "signup()">SIGN UP</button>
+				
+				<p class="login__signup">Have an account? &nbsp;<a id = "login-link" href="login.html">Log in</a></p>
+			</form>
+		</div>
+		
+		<!--<label id = "user-name-label">User name</label>
+		<input type="text" id = "user-name">
+		<label id = "password-label">Password</label>
+		<input type="text" id = "password">
+		<button id = "login" onclick = "login()">-->
+		
+	</body>
+</html>

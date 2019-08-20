@@ -1,0 +1,115 @@
+/*
+============================================================================
+ global.css
+ Web Project
+ Author: Tamar Cohen & Sara Borowski
+ ============================================================================
+*/
+
+body {
+	background-color: #ffffff;
+}
+h2 {
+	font-size: 30px
+}
+h3 {
+	font-size: 24px
+}
+.layout-serif {
+	font-family: serif
+}
+h1,h2,h3 {
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-weight: 400;
+	margin: 10px 0;
+	color: #004e72;
+}
+.layout-wide {
+	letter-spacing: 4px
+}
+hr {
+	color: #31708e;
+	border-top: 2px solid;
+}
+
+/*navbar*/
+nav {
+	background-color: #013f6e;
+}
+nav ul {
+	list-style-type: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+nav li a, nav li a:hover {
+	color: #ffffff;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	padding: 14px 16px;
+	font-size: 20px;
+}
+nav li a:hover {
+	background-color: #105c7e;
+}
+.left li {
+	float: left;
+}
+.right li {
+	float: right;
+}
+@media screen and (max-width:767px) {
+	.left li {
+		float: none;
+	}
+	.right li {
+		float: none;
+	}
+}
+
+/*global layouts */
+.layout-quarter {
+	float: left;
+	width: 100%;
+}
+.layout-quarter {
+	width: 24.99999%;
+}
+.layout-quarter {
+	padding: 0 0px;
+}
+.layout-circle {
+	border-radius: 50%;
+}
+.layout-hover-opacity:hover {
+	opacity: 0.60;
+}
+.layout-opacity-off:hover {
+	opacity: 1;
+}
+.layout-container:after,.layout-container:before,.layout-panel:after,.layout-panel:before,.layout-row:after,.layout-row:before,.layout-row-padding:after,
+.layout-row-padding:before,.layout-cell-row:before,.layout-cell-row:after,.layout-clear:after,.layout-clear:before,.layout-bar:before,.layout-bar:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.layout-container,
+.layout-panel {
+	padding: 0.01em 16px;
+}
+.layout-panel {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+.layout-padding-64 {
+	padding-top: 64px!important;
+	padding-bottom: 64px!important
+}
+.layout-center .layout-bar {
+	display: inline-block;
+	width: auto;
+}
+.layout-center .layout-bar-item {
+	text-align: center;
+}

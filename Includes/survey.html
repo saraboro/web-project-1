@@ -1,0 +1,130 @@
+<!--
+============================================================================
+ survey.html
+ Web Project
+ Author: Tamar Cohen & Sara Borowski
+ ============================================================================
+-->
+<!doctype html>
+<html lang="en">
+   <head>
+      <title>Survey</title>
+      <meta name="description" content="Web Project ">
+      <meta name="author" content="Tamar Cohen & Sara Borowski">
+      <meta charset="utf-8" />
+      <!-- Stylesheet File -->
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="../CSS/global.css" rel="stylesheet">
+      <link href="../CSS/survey.css" rel="stylesheet">
+
+      <!-- JS File -->
+      <script src="../JS/survey.js"></script>
+      <!-- Favicon -->
+      <link rel="shortcut icon" type="image/png" href="../Media/favicon.png" />
+   </head>
+   <body>
+		<!-- Navbar -->
+		<link rel = "stylesheet" type = "text/css" href = "../CSS/global.css"/>
+		<nav>
+			<ul>
+				<div class="left">
+					<li><a href="../index.html">About</a></li>
+					<li><a href="../Includes/statistics.html">Statistics</a></li>
+					<li><a href="../Includes/survey.html">Fill Survey</a></li>
+					<li><a href="../Includes/compare.html">Compare</a></li>
+				</div>
+				<div class="right">
+					<li><a href="../Includes/signup.html">Sign Up</a></li>
+					<li><a href="../Includes/login.html">Login</a></li>
+				</div>
+			</ul>
+		</nav>
+		
+      <form action="#popup_thanks" method="get" class="style-form">
+         <div class="header-text httal htvam">
+            <h1 class="form-header">
+               Market Research Survey
+            </h1>
+            <div class="form-subHeader">
+               Please take a few minutes to fill out this research survey
+            </div>
+         </div>
+		 <hr>
+         <label class="question"> Gender </label>
+         <label class="container"><input type="radio" name="gender" value="male" required>Male <span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="gender" value="female">Female <span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="gender" value="other">Other <span class="checkmark"></span></label>
+		
+         <label class="question"> Age </label>
+         <label class="container"><input type="radio" name="Age" value="0-18" required>0-17<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="Age" value="18-24">18-24<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="Age" value="25-34">25-34<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="Age" value="35-44">35-44<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="Age" value="45-54">45-54<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="Age" value="55-64">55-64<span class="checkmark"></span></label>
+		 <label class="container"><input type="radio" name="Age" value="65 or more">65 or more<span class="checkmark"></span></label>
+
+         <label class="question"> Do you have a car license? </label>
+         <label class="container"><input type="radio" name="license" value="yes" required>Yes<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="license" value="no">No<span class="checkmark"></span></label>
+
+         <label class="question"> Do you have a car? </label>
+         <label class="container"><input type="radio" name="car" value="yes" required>Yes<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="car" value="no">No<span class="checkmark"></span></label>
+
+         <label class="question"> Do you use a vehicle safety technology such as Mobileye?</label>
+         <label class="container"><input type="radio" name="technology" value="yes" required>Yes<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="technology" value="no">No<span class="checkmark"></span></label> 
+
+         <label class="question"> Have you ever been involved in a car accident? </label>
+         <label class="container"><input type="radio" name="accident" value="yes" required onclick="show_continuous_car_accident_questions(this)">Yes<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="accident" value="no" required onclick="hide_continuous_car_accident_questions(this)">No<span class="checkmark"></span></label>
+         
+		 <div id = "continuous_car_accident_questions">
+            <label class="question"> What do you think was the main cause of the car accident? </label>
+            <label class="container"><input type="radio" name="accident_cause" value="tiredness">Tiredness<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="accident_cause" value="speeding">Speeding<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="accident_cause" value="drunk driving">Drunk driving<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="accident_cause" value="swerving">Swerving<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="accident_cause" value="phone distraction">Phone distraction<span class="checkmark"></span></label>
+            
+			<label class="question"> How severe was the accident? </label>
+            <label class="container"><input type="radio" name="accident_severe" value="Light">Light - just a few scratches<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="accident_severe" value="Medium">Medium - the car needed to get fixed and/or the person needed to go to the hospital<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="accident_severe" value="Critical">Critical - the car was totalled and/or the person was in critical condition<span class="checkmark"></span></label>
+         </div>
+         
+		 <label class="question"> What do you think is the main cause of car accidents? </label>
+         <label class="container"><input type="radio" name="general_accident_cause" value="tiredness" required>Tiredness<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="general_accident_cause" value="speeding">Speeding<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="general_accident_cause" value="drunk driving">Drunk driving<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="general_accident_cause" value="swerving">Swerving<span class="checkmark"></span></label>
+         <label class="container"><input type="radio" name="general_accident_cause" value="phone distraction">Phone distraction<span class="checkmark"></span></label>
+
+		 <button type="submit" class="col-md-4 text-center btn btn-outline-dark">Submit</button>
+      </form>
+
+      <!--popup-->
+      <div id="popup_thanks" class="overlay">
+         <div class="popup">
+			<div class="content">
+				<h2>Thank you for filling out our survey!</h2>
+				<div class="container">
+				   <div class="row">
+					  <div class="col">
+						 <a href="./compare.html">
+							<img src="../img/compare.jpg" alt="compare" style="width:60%" class=" layout-hover-opacity">
+							<h3>Compare Results</h3>
+					  </div>
+					  <div class="col">
+					  <a href="./statistics.html"> <img src="../img/statistics.png" alt="statistics" style="width:60%" class=" layout-hover-opacity">
+					  <h3>View Statistics</h3>
+					  </div>
+				   </div>
+				</div>
+				<a class="close" href="#">&times;</a>
+			</div>
+		</div>
+      </div>
+   </body>
+</html>
